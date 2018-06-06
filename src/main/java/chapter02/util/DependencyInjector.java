@@ -12,7 +12,7 @@ public class DependencyInjector {
 		System.out.println("DependencyInjector.shutdown()");
 	}
 	
-	public Object getObject(Class type) {
+	public Object getObject(@SuppressWarnings("rawtypes") Class type) {
 		if (type == PDFService.class) {
 			return new PDFService();
 		} else if (type == PDFAction.class){

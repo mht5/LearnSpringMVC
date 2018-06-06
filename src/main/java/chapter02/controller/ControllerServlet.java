@@ -6,7 +6,6 @@ import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -24,8 +23,8 @@ import chapter02.validator.ProductValidator;
  * @author mohan
  *
  */
-@WebServlet(name = "ControllerServlet", urlPatterns = {
-		"/input-product", "/save-product", "/form", "/pdf"})
+/*@WebServlet(name = "ControllerServlet", urlPatterns = {
+		"/input-product", "/save-product", "/form", "/pdf"})*/
 public class ControllerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1873L;
 	private DependencyInjector dependencyInjector;
