@@ -4,6 +4,36 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean name="product" class="chapter01.Product" />
+	<!-- use constructor to create a bean -->
+	<bean name="product" class="chapter01.bean.Product" />
+	
+	<!-- use factory to create a bean -->
+	<bean id="localDate" class="java.time.LocalDate" factory-method="now" />
+	<!-- shutdown method -->
+	
+	<bean id="executorService" class="java.util.concurrent.Executors"
+		factory-method="newCachedThreadPool"
+		destroy-method="shutdown" />
+		
+	<!-- use constructor to pass parameters -->
+	<bean name="featuredProduct" class="chapter01.bean.Product">
+		<constructor-arg name="name" value="DELL" />
+	</bean>
+	
+	<!-- dependency injection using setter -->
+	<bean name="address" class="chapter01.bean.Address">
+		<constructor-arg name="city" value="Chengdu"/>
+		<constructor-arg name="state" value="Sichuan"/>
+		<constructor-arg name="country" value="China"/>
+		<constructor-arg name="zipCode" value="060000"/>
+	</bean>
+	<bean name="employee" class="chapter01.bean.Employee">
+		<property name="address" ref="address" />
+		<property name="firstName" value="John" />
+		<property name="lastName" value="Doe" />
+		<!-- <constructor-arg name="address" ref="address" />
+		<constructor-arg name="firstName" value="John" />
+		<constructor-arg name="lastName" value="Doe" /> -->
+	</bean>
 	
 </beans>
