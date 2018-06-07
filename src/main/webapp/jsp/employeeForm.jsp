@@ -26,7 +26,7 @@
 					<label for="lastName">Last Name: </label>
 					<form:input path="lastName" />
 				</p>
-				<p><form:errors path="birthDate" cssClass="error" /></p>
+				<p><form:errors path="birthDate" cssClass="text-error" /></p>
 				<p>
 					<label for="birthDate">Date of Birth: </label>
 					<form:input path="birthDate" />
