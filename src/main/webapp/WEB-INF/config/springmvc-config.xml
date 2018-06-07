@@ -15,9 +15,10 @@
 	<!-- <bean name="/input-product" class="chapter03.controller.InputProductController" />
 	<bean name="/save-product" class="chapter03.controller.SaveProductController" /> -->
 	
-	<context:component-scan base-package="chapter04.controller" />
+	<!-- <context:component-scan base-package="chapter04.controller" /> -->
 	<context:component-scan base-package="chapter05.controller" />
 	<context:component-scan base-package="chapter06.controller" />
+	<context:component-scan base-package="chapter07.controller" />
 	<context:component-scan base-package="chapter04.service" />
 	<context:component-scan base-package="chapter05.service" />
 	<!-- 需要添加component-scan以使formatter生效 -->
@@ -26,6 +27,10 @@
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/jsp/" />
 		<property name="suffix" value=".jsp" />
+	</bean>
+	
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="/WEB-INF/resources/messages" />
 	</bean>
 	
 	<!-- converter可以完成任意类型的转换 -->
