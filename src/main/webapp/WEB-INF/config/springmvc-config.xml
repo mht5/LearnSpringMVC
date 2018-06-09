@@ -19,9 +19,9 @@
 	<context:component-scan base-package="chapter05.controller" />
 	<context:component-scan base-package="chapter06.controller" />
 	<context:component-scan base-package="chapter07.controller" />
-	<context:component-scan base-package="chapter08.controller" />
 	<context:component-scan base-package="chapter04.service" />
 	<context:component-scan base-package="chapter05.service" />
+	<context:component-scan base-package="util" />
 	<!-- 需要添加component-scan以使formatter生效 -->
 	<context:component-scan base-package="chapter06.formatter" />
 	
@@ -72,5 +72,6 @@
 	
 	<mvc:annotation-driven conversion-service="conversionService" />
 	<mvc:resources mapping="/*.html" location="/" />
+	<mvc:resources mapping="/image/*.jpg" location="/image/" />
 	
 </beans>
