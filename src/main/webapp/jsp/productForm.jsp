@@ -13,26 +13,30 @@
 		    	<a href="<%=request.getContextPath()%>/index.html" class="navbar-brand mr-2">Home</a>
 		  	</section>
 		</header><br/>
-		<form method="post" action="save-product">
+		<form method="post" enctype="multipart/form-data" action="save-product">
 			<h1>Add Product</h1>
 			${empty requestScope.errors? "" : "<p style='color:red'>Error(s)!<ul>"}
 			<!-- ${requestScope.errors.stream().map(x -> "--><li>"+=x+="</li><!--").toList()} -->
 			${empty requestScope.errors? "" : "</ul></p>"}
 			<label>
 				<span>Product Name: </span>
-				<input id="name" type="text" name="name" value="${form.name}" tabindex="1">
+				<input id="name" type="text" name="name" value="${form.name}">
+			</label>
+			<label>
+				<span>Product Image: </span>
+				<input type="file" name="files[0]" />
 			</label>
 			<label>
 				<span>Description: </span>
-				<input id="description" type="text" name="description" value="${form.description}" tabindex="2">
+				<input id="description" type="text" name="description" value="${form.description}">
 			</label>
 			<label>
 				<span>Price: </span>
-				<input id="price" type="number" name="price" step="any" value="${form.price}" tabindex="3">
+				<input id="price" type="number" name="price" step="any" value="${form.price}">
 			</label>
 			<label>
 				<span>&nbsp;</span>
-				<input type="submit" value="Submit" tabindex="4" />
+				<input type="submit" value="Submit" />
 			</label>
 		</form>
 	</body>
