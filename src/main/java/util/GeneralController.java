@@ -63,4 +63,9 @@ public class GeneralController {
 		model.addAttribute("myArray", myArray);
 		return "jstl";
 	}
+	
+	@RequestMapping(value= "/i18n")
+	public String i18n(Model model) {
+		return "i18n";
+	}
 }

@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>Add Employee Form</title>
+		<title>Add Product Form</title>
 		<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
 		<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
 	</head>
@@ -38,7 +38,7 @@
 				</p>
 				<p id="buttons">
 					<input id="reset" type="reset" value="Reset">
-					<input type="submit" type="submit" value="Add Employee">
+					<input type="submit" type="submit" value="Add Product">
 				</p>
 			</fieldset>
 		</form:form>
