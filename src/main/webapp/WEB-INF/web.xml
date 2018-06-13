@@ -11,7 +11,7 @@
 		</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>/config/springmvc-config.xml</param-value>
+			<param-value>/WEB-INF/config/springmvc-config.xml</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 		<!-- 使用Servlet3及更新版本处理文件上传 -->

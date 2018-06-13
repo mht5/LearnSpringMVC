@@ -32,7 +32,7 @@ public class ProductController {
 			for (MultipartFile multipartFile : files) {
 				String fileName = multipartFile.getOriginalFilename();
 				fileNames.add(fileName);
-				File file = new File(request.getServletContext().getRealPath("/image"), fileName);
+				File file = new File(request.getServletContext().getRealPath("/WEB-INF/image"), fileName);
 				try {
 					multipartFile.transferTo(file);
 				} catch (IOException e) {

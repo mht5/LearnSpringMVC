@@ -25,7 +25,7 @@ public class FileController {
 	public void saveFile(HttpServletRequest request,@ModelAttribute UploadedFile uploadedFile, Model model) {
 		MultipartFile multipartFile = uploadedFile.getMultipartFile();
 		String fileName = multipartFile.getOriginalFilename();
-		File file = new File(request.getServletContext().getRealPath("/image"), fileName);
+		File file = new File(request.getServletContext().getRealPath("/WEB-INF/image"), fileName);
 		try {
 			multipartFile.transferTo(file);
 		} catch (IOException e) {

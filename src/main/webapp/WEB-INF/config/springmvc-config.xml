@@ -27,7 +27,7 @@
 	<context:component-scan base-package="chapter06.formatter" />
 	
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/jsp/" />
+		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
 	
@@ -41,8 +41,8 @@
 	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
 		<property name="basenames">
 			<list>
-				<value>/i18n/messages</value>
-				<value>/i18n/labels</value>
+				<value>/WEB-INF/i18n/messages</value>
+				<value>/WEB-INF/i18n/labels</value>
 			</list>
 		</property>
 	</bean>
@@ -85,6 +85,6 @@
 	
 	<mvc:annotation-driven conversion-service="conversionService" />
 	<mvc:resources mapping="/*.html" location="/" />
-	<mvc:resources mapping="/image/*.jpg" location="/image/" />
+	<mvc:resources mapping="/image/*.jpg" location="/WEB-INF/image/" />
 	
 </beans>
