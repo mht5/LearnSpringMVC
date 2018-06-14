@@ -12,7 +12,7 @@ public class Test {
 	public static void main(String[] args) {
 		@SuppressWarnings("resource")
 		ApplicationContext context = new ClassPathXmlApplicationContext(
-				new String[] {"spring-config_chapter01.xml"});
+				new String[] {"spring-config-chapter01.xml"});
 		
 		Product product = context.getBean("product", Product.class);
 		product.setName("test");

@@ -1,6 +1,5 @@
-package chapter02;
+package chapter02.action;
 
-import chapter02.action.PDFAction;
 import chapter02.util.DependencyInjector;
 
 public class PDFActionTest {
